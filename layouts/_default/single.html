@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ .Content }}
+
+  {{ with .GetTerms "tags" }}
+    <p>{{ (site.GetPage "tags").LinkTitle }}:</p>
+    <ul>
+      {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+{{ end }}

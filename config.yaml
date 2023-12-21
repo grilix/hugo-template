@@ -1,0 +1,16 @@
+---
+# https://gohugo.io/getting-started/configuration/#all-configuration-settings
+#baseurl: "http://blog.hugoexample.com/"
+title: "Un sitio web"
+# https://gohugo.io/quick-reference/emojis/
+enableEmoji: true
+permalinks:
+  term:
+    tags: /t/:slug
+  page:
+    pages: /p/:slug
+    blog: /b/:year/:month/:slug
+  section:
+    pages: /p
+    blog: /b
+---

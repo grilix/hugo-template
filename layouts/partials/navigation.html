@@ -1,0 +1,12 @@
+<ul>
+  <li><a href="/">Inicio</a></li>
+  {{ with .Site.GetPage "list" "tags" }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+  {{ with .Site.GetPage "section" "blog" }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+  {{ with .Site.GetPage "section" "about" }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>

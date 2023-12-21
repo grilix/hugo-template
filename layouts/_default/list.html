@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{ if .IsSection }}                          <!-- Section -->
+    {{ if (eq .File.Path "") }}
+      <h1>Publicaciones en {{ .Title | default .Section }}</h1>
+    {{ else }}
+      <h1>{{ .Title }}</h1>
+      <h2>Publicaciones</h2>
+    {{ end }}
+  {{ end }}
+
+  <ul>
+  {{- range .Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end -}}
+  </ul>
+{{ end }}
